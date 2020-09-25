@@ -10,9 +10,9 @@ Login using `admin/admin`
 ## Installation 
 
 ```bash
-composer require laravel-admin-ext/grid-lightbox
+composer require ygmt/grid-lightbox
 
-php artisan vendor:publish --tag=laravel-admin-grid-lightbox
+php artisan vendor:publish --tag=ygmt-grid-lightbox
 ```
 
 ## Configurations
@@ -52,6 +52,11 @@ $grid->picture()->gallery(['width' => 50, 'height' => 50]);
 //img class properties
 $grid->picture()->lightbox(['class' => 'rounded']);
 $grid->picture()->gallery(['class' => ['circle', 'thumbnail']]);
+
+
+//photo
+$grid->picture()->photo();
+
 ```
 
 ## Donate
