@@ -19,18 +19,21 @@ class LightboxServiceProvider extends ServiceProvider
 
         if ($this->app->runningInConsole() && $assets = $extension->assets()) {
             $this->publishes(
-                [$assets => public_path('vendor/laravel-admin-ext/grid-lightbox')],
-                'laravel-admin-grid-lightbox'
+                [$assets => public_path('vendor/ygmt/grid-lightbox')],
+                'ygmt-grid-lightbox'
             );
         }
 
         Admin::booting(function () {
 
-            Admin::css('vendor/laravel-admin-ext/grid-lightbox/magnific-popup.css');
-            Admin::js('vendor/laravel-admin-ext/grid-lightbox/jquery.magnific-popup.min.js');
-
+            Admin::css('vendor/ygmt/grid-lightbox/magnific-popup.css');
+            Admin::js('vendor/ygmt/grid-lightbox/jquery.magnific-popup.min.js');
             Column::extend('lightbox', LightboxDisplayer::class);
             Column::extend('gallery', GalleryDisplayer::class);
+
+	        Admin::css('vendor/ygmt/grid-lightbox/jquery.magnify.css');
+	        Admin::js('vendor/ygmt/grid-lightbox/layer.js');
+	        Column::extend('photo', PhotoDisplayer::class);
         });
     }
 }
