@@ -1,5 +1,5 @@
 {
-    "name": "laravel-admin-ext/grid-lightbox",
+    "name": "ygmt/grid-lightbox",
     "description": "Turn your grid into a lightbox & gallery",
     "type": "library",
     "keywords": ["laravel-admin", "extension", "grid", "lightbox", "gallery"],
